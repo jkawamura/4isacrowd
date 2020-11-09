@@ -1,0 +1,123 @@
+body {
+    font-family: sans-serif, Arial;
+    background-image: url(blur.png);
+    background-size: cover;                    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+
+.board {
+    margin: auto;
+    width: 400px;
+    height: 600px;
+    display: none;
+    flex-wrap: wrap;
+    border: 12px;
+    border-style: inset;
+    border-radius: 12px;
+    background-color: #eeeeee;
+}
+
+p{
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+#level, #scoretext {
+    margin: auto;
+    text-align: center;
+    color: black;
+    border: 2px solid black;
+    width: 150px;
+    display: none;
+}
+
+.icon:hover {
+    cursor: pointer;   
+}
+
+
+.welcome, .score {
+    text-align: center;
+    color: #355070;
+    position: fixed;
+    display: block;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    width: 500px;
+    height: 640px;
+    background-color: #e77c76E0;
+    z-index:2;
+    animation: slideup 1.5s forwards;
+    border-radius: 12px;
+
+}
+
+#score {
+    display: none;
+    height: 250px;
+}
+
+
+#start, label.themeselect, label.diffselect, #phpsubmit {
+    font-size: 20px;
+    color: #355070;
+    background-color: transparent;
+    border-radius: 12px;
+    border: 2px solid #355070;
+    padding: 12px 30px;
+}
+
+
+input[type="radio"].themeselect, input[type="radio"].diffselect {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+  }
+
+label.themeselect:hover, #start:hover, #phpsubmit:hover, label.diffselect:hover {
+    transition-duration: .4s;
+    background-color:#355070;
+    border: 2px solid #355070;
+    cursor: pointer;
+    color: #e77c76E0;
+}
+
+input[type="radio"].themeselect:checked + label, input[type="radio"].diffselect:checked + label {
+    background-color: #355070;
+    border: 2px solid #355070;
+    cursor: pointer;
+    color: #e77c76E0;
+}
+
+@keyframes fadein {
+    from{opacity: .4;}
+    to{opacity: 1;}
+}
+
+@keyframes fadeout {
+    from{opacity: 1;}
+    to{opacity: .4;}
+}
+
+@keyframes fadein2 {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+@keyframes fadeout2 {
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+
+@keyframes slideup{
+    from {top: 120%;}
+    to {top: 10%;}
+}
+
+@keyframes slidedown{
+    from {top: 10%;}
+    to {top: 120%;}
+}

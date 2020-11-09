@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="icon" type="image/png" href="favicon-32x32.png"/>
+</head>
+
+
+<body>
+    <div class="welcome">
+        <h1>Welcome to 4 is a Crowd!</h1>
+        <p>Select groups of four or more adjacent squares to score. Easy difficulty increases the number of colors on the board once every three levels, medium difficulty once every two levels, and hard difficulty once every level. The harder the difficulty, the more points each tile is worth. </p>
+        <label for="name" style="font-size: 1em" ><b>Username for Scoreboard (max three letters):</b></label ><br style="line-height: 30px">
+        <input type="text" id="name" name="name" maxlength="3" style="text-align: center; height: 40px; width: 60px; border: 2px solid#355070; border-radius: 12px; background-color: transparent; color: #355070; font-size: 20px"><br>
+
+        <h4>Select Difficulty:</h4>
+        <input type="radio" class="diffselect" name="diff" value="easy" id="easy" checked="checked">
+        <label for="easy" class="diffselect">Easy</label>
+        <input type="radio" class="diffselect" name="diff" value="med" id="med">
+        <label for="med" class="diffselect">Medium</label>
+        <input type="radio" class="diffselect" name="diff" value="hard" id="hard">
+        <label for="hard" class="diffselect">Hard</label><br><br>
+
+        <h4>Select a Theme:</h4>
+        <input type="radio" class="themeselect" name="theme" value="Sunrise" id="Sunrise" checked="checked">
+        <label for="Sunrise" class="themeselect">Sunrise</label>
+        <input type="radio" class="themeselect" name="theme" value="Sea" id="Sea">
+        <label for="Sea" class="themeselect">Sea</label>
+        <input type="radio" class="themeselect" name="theme" value="Forest" id="Forest">
+        <label for="Forest" class="themeselect">Forest</label><br><br><br>
+
+        <label for="submit" style="font-size: 1em" ><b>Press Start to Begin!</b></label ><br style="line-height: 30px">
+        <button id="start" name="submit" onclick="$('.welcome').css({'animation':'slidedown 1.5s forwards'});buildLevel()">Start</button>
+    </div>
+
+
+    <h1 id="level">Level 1</h1><br>
+    <h3 id="scoretext">Score: ---</h3><br>
+
+    <div class="board">
+    </div>
+     
+    <div class="score" id="score">
+        <h1>Game Over!</h1>
+        <h2 id="insertscore"></h2>
+        <form action="index.php" method="POST">
+            <input type="text" id="nameform" name="name" style="display: none" value=""><br>
+            <input type="text" id="scoretextform" name="score" style="display: none"><br>
+            <button type="submit" id="phpsubmit">Submit Your Score</button>
+        </form>
+    </div>
+
+</body>
+</html>

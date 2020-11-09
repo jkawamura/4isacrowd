@@ -1,0 +1,58 @@
+body{
+    background-image: url(blur.png);
+    background-size: cover;                    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+
+div {
+    text-align: center;
+    color: #355070;
+    margin: auto;
+    margin-top: 1%;
+    width: 400px;
+    height: 650px;
+    background-color: #e77c76E0;
+    border-radius: 12px;
+    font-family: sans-serif;
+}
+
+table {
+    margin: auto;
+}
+
+caption {
+    padding-top: 10%;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+td, th {
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+}
+
+.button {
+    font-size: 20px;
+    color: #355070;
+    background-color: transparent;
+    border-radius: 12px;
+    border: 2px solid #355070;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.button:hover {
+    transition-duration: .4s;
+    background-color:#355070;
+    cursor: pointer;
+    color: #e77c76E0;
+}
+
+
+.user {
+    border-top: 2px dashed #355070;
+}
